@@ -2,10 +2,8 @@ const GoogleSpreadsheet = require('google-spreadsheet')
 const _p = require('es6-promisify')
 
 // INIT ///////////////////////////////////////////////////////////////
-function init (key, credsPath) {
+function init (key, creds) {
   return new Promise((resolve, reject) => {
-    // With auth -- read + write
-    const creds = require(credsPath)
 
     // spreadsheet key is the long id in the sheets URL
     // https://docs.google.com/spreadsheets/d/1fyGsYhinmTRNpJyw_uVDpI3wYmWz9FXIYgR2DuobZ_w/editv
